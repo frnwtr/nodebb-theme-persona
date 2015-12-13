@@ -1,5 +1,5 @@
 {
-  "name": "nodebb-theme-persona",
+  "name": "nodebb-theme-persona-26aprile",
   "version": "4.0.41",
   "nbbpm": {
     "compatibility": "^0.8.2 || ^0.9.0"
@@ -8,7 +8,7 @@
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona"
+    "url": "https://github.com/frnwtr/nodebb-theme-persona"
   },
   "keywords": [
     "nodebb",
@@ -36,6 +36,6 @@
   ],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/psychobunny/nodebb-theme-persona/issues"
+    "url": "https://github.com/frnwtr/nodebb-theme-persona/issues"
   }
 }
