@@ -1,13 +1,22 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 
 <div class="row register">
-	<div class="{register_window:spansize}">
+    <div class="{register_window:spansize}">
 		<div class="well well-lg">
 			<div class="alert alert-danger" id="register-error-notify" <!-- IF error -->style="display:block"<!-- ELSE -->style="display: none;"<!-- ENDIF error -->>
 				<button type="button" class="close" data-dismiss="alert">&times;</button>
 				[[error:registration-error]]
 				<p>{error}</p>
 			</div>
+            <!-- IF alternate_logins -->
+            <h4>[[register:alternative_registration]]</h4>
+            <ul class="alt-logins">
+                <!-- BEGIN authentication -->
+                <li class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></i></a></li>
+                <!-- END authentication -->
+            </ul>
+            <h5 class="text-center">Oppure</h5>
+            <!-- ENDIF alternate_logins -->
 			<form component="register/local" class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">
 				<div class="form-group">
 					<label for="email" class="col-lg-4 control-label">[[register:email_address]]</label>
@@ -92,17 +101,4 @@
 			</form>
 		</div>
 	</div>
-
-	<!-- IF alternate_logins -->
-	<div class="col-md-6">
-		<div class="well well-lg">
-			<h4>[[register:alternative_registration]]</h4>
-			<ul class="alt-logins">
-				<!-- BEGIN authentication -->
-				<li class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></i></a></li>
-				<!-- END authentication -->
-			</ul>
-		</div>
-	</div>
-	<!-- ENDIF alternate_logins -->
 </div>
