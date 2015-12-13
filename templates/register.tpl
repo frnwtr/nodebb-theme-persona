@@ -9,13 +9,14 @@
 				<p>{error}</p>
 			</div>
             <!-- IF alternate_logins -->
-            <h4>[[register:alternative_registration]]</h4>
+            <h4>Registrati con</h4>
             <ul class="alt-logins">
                 <!-- BEGIN authentication -->
                 <li class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></i></a></li>
                 <!-- END authentication -->
             </ul>
-            <h5 class="text-center">Oppure</h5>
+            <hr />
+            <h5 class="text-center">Oppure compila il form</h5>
             <!-- ENDIF alternate_logins -->
 			<form component="register/local" class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">
 				<div class="form-group">
